@@ -3,41 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Tarefas</title><link rel="stylesheet" href="./src/css/styles.css">
+    <title>Minhas Tarefas</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
     <link rel="icon" href="./icon.png" type="image/png">
 </head>
 <body>
-    <header>
-        <h1>Tarefas</h1>
-    </header>
-
-    <main>
-        <section class="add-task-container">
-            <h2>Criar tarefa</h2>
-            <div class="add-task__controls">
-                <label for="add-task" class="hidden">Nova tarefa</label>
-                <input type="text" id="add-task" >
-                <button type="button" id="btn-create-task">CRIAR</button>
-            </div>
-            <p class="warn-empty-create-task hidden">Digite algo</p>
-        </section>
-
-        <section class="filter-container">
-            <h3>Filtrar</h3>
-            <div class="filter__controls">
-                <button type="button" class="filter__btn filter__btn--all">TODAS</button>
-                <button type="button" class="filter__btn filter__btn--undone">PENDENTES</button>
-                <button type="button" class="filter__btn filter__btn--done">FEITAS</button>
-            </div>
-        </section>
-
-        <p class="tasks-stats">
-            Pendentes: 0 | Feitas: 0
-        </p>
-
-        <section class="tasks-container" id="tasks">
-        </section>
-    </main>
+    <div class="app">
+        <header>
+            <h1>Tarefas</h1>
+        </header>
+        <main>
+            <section class="add-task-container">
+                <h2>Criar tarefa</h2>
+                <div class="add-task__controls">
+                    <label for="add-task" class="hidden">Nova tarefa</label>
+                    <input type="text" id="add-task" >
+                    <button type="button" id="btn-create-task">CRIAR</button>
+                </div>
+                <p class="warn-empty-create-task hidden">Digite algo</p>
+            </section>
+            <section class="filter-container">
+                <h3>Filtrar</h3>
+                <div class="filter__controls">
+                    <button type="button" class="filter__btn filter__btn--all">TODAS</button>
+                    <button type="button" class="filter__btn filter__btn--undone">PENDENTES</button>
+                    <button type="button" class="filter__btn filter__btn--done">FEITAS</button>
+                </div>
+            </section>
+            <p class="tasks-stats">
+                Pendentes: 0 | Feitas: 0
+            </p>
+            <section class="tasks-container" id="tasks">
+            </section>
+        </main>
+    </div>
 
     <div class="modal-container hidden">
         <div class="modal hidden" id="modal-edit">

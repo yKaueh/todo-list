@@ -1,13 +1,3 @@
-/*
-Reset > Margin, padding, box-sizing border box
-Base > Global rules
-Utils > Classes rápidas, text-center, flex, hidden
-Animations > Animacoes para os elementos
-Components > Botao, input, card, navbar, etc
-Layout > Posicionar conteudo
-Responsiviness > responsividade
-*/
-
 /* RESET */
 
 *{
@@ -40,13 +30,19 @@ Responsiviness > responsividade
     --btn-save-dark: #1e8449;
 }
 
+html, body{
+    margin: 0;
+    height: 100%;
+}
 
 body{
-    background-color: var(--background);
+    background: var(--background);
+    font-family: Arial, sans-serif;
+}
+.app{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
 }
 
 main{
@@ -116,22 +112,21 @@ input:focus{
 
 .modal-container{
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
 }
 .modal{
+    position: relative;
     background-color: var(--secondary);
     width: 75%;
+    max-width: 600px;
     min-height: 150px;
-    margin: 1.5rem;
     padding: 1rem;
     border: 3px solid black;
     border-radius: 15px;
